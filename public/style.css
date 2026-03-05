@@ -1,0 +1,86 @@
+/*
+ * Styles for the Adventure Quest interactive story game.
+ *
+ * The design is intentionally simple and responsive. The page uses a
+ * gradient background and centers the story content within a card
+ * container. Buttons are styled to look like clickable choices.
+ */
+
+/* Apply a pleasant gradient background to the entire page */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Container for the game content */
+#game-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+/* Story text styling */
+#story-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  min-height: 120px;
+}
+
+/* Choices container */
+#choices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Styling for choice buttons */
+.choice-button {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.choice-button:hover {
+  background-color: #2ecc71;
+  transform: translateY(-2px);
+}
+
+.choice-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  #story-text {
+    font-size: 1rem;
+  }
+  .choice-button {
+    font-size: 0.9rem;
+  }
+}
